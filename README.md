@@ -12,6 +12,7 @@ I am learning how to code with the MERN stack at the moment so, while I could've
 * Greeting
 * Search box (that opens a Google search in a new tab)
 * 5-day weather (credit goes to [joshbader](https://codepen.io/joshbader/pen/EjXgqr) for the animated weather icons)
+* Run background service on startup (see Startup section below)
 
 ## Use
 In `App.js`, you can customise this to your own name and city.
@@ -22,3 +23,12 @@ const city = "Sydney" // Change to your city
 const app_id = "" // Change to your app id
 ```
 
+## Startup
+Since the React app requires `npm start` to run, I wrote a short script to run this in the background (minimised) on startup.
+* `startup/startpage.bat` has the `npm start` command.
+* `startup/startpage.vbs` runs the above batch file in the background. This goes into `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`.
+
+**Note:** `npm start` opens a browser by default so I added the below to a `.env` file to disable it:
+```
+BROWSER=none
+```
