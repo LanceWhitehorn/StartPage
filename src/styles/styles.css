@@ -1,0 +1,88 @@
+:root {
+  --color: #202124;
+}
+
+html {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+body {
+  /* Font family borrowed from Laravel */
+  font-family: scandia-web,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji!important;
+  background-color: var(--color);
+  padding: 1em;
+}
+.container {
+  width: auto;
+}
+.content{
+  color: white;
+  margin: 1em;
+  /* https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+h1, p {
+  font-weight: 100;
+}
+b {
+  font-weight: 500;
+}
+
+/* Input */
+input {
+  appearance: none;
+  border: 0px;
+  padding: 0.5em;
+  border-bottom: 1px solid white;
+  font-family: inherit;
+  font-size: 4em;
+  font-weight: 100;
+  background-color: inherit;
+  color: white;
+  caret-color: transparent;
+  text-align: center;
+  width: 14em;
+}
+input::selection {
+  background-color: transparent;
+}
+input:focus {
+  outline: none;
+}
+
+/* Formatting weather icons into a table */
+.table {
+  display: table;
+  margin: 0 auto;
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+ul {
+  display: flex;
+  position: relative;
+  padding: 0em;
+  color: var(--color);
+}
+li {
+  position: relative;
+  margin: 1em;
+}
+.weatherLabel {
+  display: block;
+  color: white;
+  font-weight: 100;
+}
+
+
+
+
