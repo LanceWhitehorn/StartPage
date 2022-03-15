@@ -5,6 +5,7 @@ import WeatherLabel from './components/weather_labels'
 function App() {
   const [search, setSearch] = useState('')
   const [dailyWeather, setDailyWeather] = useState([])
+  const name = "Lance"
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value)
@@ -30,9 +31,9 @@ function App() {
   }
 
   useEffect(() => {
-    var city = "Sydney" // Change to your city
-    var app_id = "" // Change to your app id
-    let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=${app_id}`
+    const city = "Sydney" // Change to your city
+    const app_id = "" // Change to your app id
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=${app_id}`
     fetch(url)
       .then(res => res.json())
       .then(out => {
@@ -56,7 +57,7 @@ function App() {
   return (
     <div className="container">
       <div className="content">
-        <h1>Hello, <b>Lance.</b></h1>
+        <h1>Hello, <b>{name}.</b></h1>
         <p>What are you looking for today?</p>
         <input id="searchBox" value={search} onChange={handleSearchChange} onKeyPress={handleSearchPress} autoComplete="off" autoFocus />
         <div className="table">
