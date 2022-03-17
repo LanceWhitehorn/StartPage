@@ -32,8 +32,30 @@ body {
 h1, p {
   font-weight: 100;
 }
-b {
-  font-weight: 500;
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0em 0em 0em 0.5em; /* This needs to offset the 'cursor' */
+  text-align: center;
+  vertical-align: middle;
+}
+.cursor {
+  width: 0.08em;
+  height: 1.5em;
+  background-color: white;
+  animation: blink 1s, fade 1s;
+  animation-iteration-count: 5, infinite;
+  animation-delay: 0s, 5s;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+@keyframes blink {
+  50% { background-color:var(--color); }
+}
+@keyframes fade {
+  0%, 100% { opacity: 0; }
 }
 
 /* Input */
