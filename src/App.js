@@ -53,6 +53,20 @@ function App() {
       })
       .catch(err => console.error(err))
   }, [])
+  
+  // Search box will always remain in focus even when pressing outside
+  // Escape key clears the search box
+  // Pressing tab is 'disabled' (does nothing)
+  useEffect(() => {
+    document.addEventListener('click', () => document.getElementById('searchBox').focus())
+    document.addEventListener('keydown', (e) => {
+      if (e.keyCode === 27) {
+        document.getElementById('searchBox').value = ''
+      } else if (e.keyCode === 9) {
+        e.preventDefault()
+      }
+    })
+  }, [])
 
   return (
     <div className="container">
