@@ -5,7 +5,10 @@ import WeatherLabel from './components/weather_labels'
 function App() {
   const [search, setSearch] = useState('')
   const [dailyWeather, setDailyWeather] = useState([])
-  const name = "Lance"
+  const [index, setIndex] = useState(0)
+  const [subText, setSubText] = useState('')
+  const name = 'Lance' // Change to your name
+  const subTextString = 'What are you looking for today?' // Change this to your own subtext
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value)
@@ -31,8 +34,8 @@ function App() {
   }
 
   useEffect(() => {
-    const city = "Sydney" // Change to your city
-    const app_id = "" // Change to your app id
+    const city = 'Sydney' // Change to your city
+    const app_id = '' // Change to your app id
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=${app_id}`
     fetch(url)
       .then(res => res.json())
@@ -54,6 +57,16 @@ function App() {
       .catch(err => console.error(err))
   }, [])
   
+  // Typewriter effect
+  useEffect(() => {
+    setTimeout(() => {
+      if (index < subTextString.length) {
+        setSubText(subText + subTextString[index])
+        setIndex(index + 1)
+      }
+    }, 50)
+  }, [index])
+  
   // Search box will always remain in focus even when pressing outside
   // Escape key clears the search box
   // Pressing tab is 'disabled' (does nothing)
@@ -72,7 +85,7 @@ function App() {
     <div className="container">
       <div className="content">
         <h1>Hello, <b>{name}.</b></h1>
-        <p>What are you looking for today?</p>
+        <p className="cursor">{subText}</p>
         <input id="searchBox" value={search} onChange={handleSearchChange} onKeyPress={handleSearchPress} autoComplete="off" autoFocus />
         <div className="table">
           <ul>
