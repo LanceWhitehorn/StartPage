@@ -17,10 +17,10 @@ I am learning how to code with the MERN stack at the moment so, while I could've
 ## Use
 In `App.js`, you can customise this to your own name and city.
 ```javascript
-const name = "Lance" // Change to your name
+const name = 'Lance' // Change to your name
 //...
-const city = "Sydney" // Change to your city
-const app_id = "" // Change to your app id
+const city = 'Sydney' // Change to your city
+const app_id = '' // Change to your app id
 ```
 
 ## Startup
