@@ -85,7 +85,7 @@ function App() {
     <div className="container">
       <div className="content">
         <h1>Hello, <b>{name}.</b></h1>
-        <p className="cursor">{subText}</p>
+        <p>{subText}<span className="cursor"></span></p>
         <input id="searchBox" value={search} onChange={handleSearchChange} onKeyPress={handleSearchPress} autoComplete="off" autoFocus />
         <div className="table">
           <ul>
