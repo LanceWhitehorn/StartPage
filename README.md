@@ -16,11 +16,24 @@ I am learning how to code with the MERN stack at the moment so, while I could've
 
 ## Use
 In `App.js`, you can customise this to your own name and city.
-```javascript
+```js
 const name = 'Lance' // Change to your name
 //...
 const city = 'Sydney' // Change to your city
 const app_id = '' // Change to your app id
+```
+You can also set up your own shortcuts in `shortcuts.js`. I've set mine up for YouTube, Spotify, Wordle, and Google searches.
+```js
+if (s.includes('y/')) {
+    const search_query = s.replace('y/', '').trim()
+    url = `https://www.youtube.com/results?search_query=${search_query}`
+} else if (s === 'spotify') {
+    url = `spotify://open.spotify.com/`
+} else if (s === 'wordle') {
+    url = `https://www.nytimes.com/games/wordle/index.html`
+} else {
+    url = `https://www.google.com/search?q=${s}`
+}
 ```
 
 ## Startup
