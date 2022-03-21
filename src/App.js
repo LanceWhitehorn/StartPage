@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './styles/weather_icons.css'
 import WeatherLabel from './components/weather_labels'
+import shortcuts from './components/shortcuts'
 
 function App() {
   const [search, setSearch] = useState('')
@@ -16,8 +17,7 @@ function App() {
 
   const handleSearchPress = (e) => {
     if (e.charCode === 13) {
-      const url = `https://www.google.com/search?q=${search}`
-      window.open(url, '_blank')
+      shortcuts(search)
       setSearch('')
     }
   }
