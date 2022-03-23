@@ -15,12 +15,17 @@ I am learning how to code with the MERN stack at the moment so, while I could've
 * Run background service on startup (see Startup section below)
 
 ## Use
-In `App.js`, you can customise this to your own name and city.
+In `App.js`, you can customise this to your own name, city, and quote (or use a randomised quote).
 ```js
+//Name
 const name = 'Lance' // Change to your name
-//...
-const city = 'Sydney' // Change to your city
-const app_id = '' // Change to your app id
+
+// Weather
+<Weather city='{your city}' /> // Change to your city
+
+// Quote
+<Typewriter custom={true} text="What are you looking for today?" /> // Use your own custom text
+<Typewriter custom={false} /> // Use randomised quotes
 ```
 You can also set up your own shortcuts in `shortcuts.js`. I've set mine up for YouTube, Spotify, Wordle, and Google searches.
 ```js
