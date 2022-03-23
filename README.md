@@ -5,7 +5,7 @@ When I came across [r/Startpages](https://www.reddit.com/r/startpages/), the par
 
 I am learning how to code with the MERN stack at the moment so, while I could've done this as a one page html file with jQuery, I wanted to make this using React as overkill as that is.
 
-![image](https://user-images.githubusercontent.com/53590758/158323133-a02d8caa-5a16-46be-ae38-06b9c7c66d2e.png)
+![image](https://user-images.githubusercontent.com/53590758/159636280-316f70a4-cd60-47e6-b9bd-af3039f5b5d6.png)
 
 
 ## Features
