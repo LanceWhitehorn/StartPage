@@ -17,7 +17,7 @@ const Weather = ({ city }) => {
 	}
 
 	useEffect(() => {
-		const app_id = "22d4e741c978538ccba7d43999bb6441" // Change to your app id
+		const app_id = '' // Change to your app id
 		const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=${app_id}`
 		fetch(url)
 			.then(res => res.json())
