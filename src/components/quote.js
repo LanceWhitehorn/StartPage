@@ -8,7 +8,6 @@ const Quote = () => {
 			.then(res => res.json())
 			.then(out => {
 				setQuote(out['content'])
-				console.log(out['content'])
 			})
 	}, [])
 	return (quote)
